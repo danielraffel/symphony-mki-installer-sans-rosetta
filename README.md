@@ -135,9 +135,9 @@ chmod +x uninstall_apogee_manual.sh
 
 **This project is not affiliated with or endorsed by Apogee Electronics.**
 All rights, trademarks, and copyrights for:
-	•	Symphony I/O
-	•	Apogee Maestro
-	•	And all related software belong to © Copyright - Apogee Electronics Corp.
+- Symphony I/O
+- Apogee Maestro
+- And all related software belong to © Copyright - Apogee Electronics Corp.
 
 This tool is provided as-is with no warranties. Use at your own risk.
 
