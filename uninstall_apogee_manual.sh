@@ -51,15 +51,10 @@ exec > >(tee -a "$LOG") 2>&1
 
 echo "Starting Apogee manual uninstall..."
 
-# 1. Remove Applications
+# 1. Remove Application
 if [ -d "/Applications/Apogee Maestro 2.app" ]; then
     echo "Removing Apogee Maestro 2.app..."
     sudo rm -rf "/Applications/Apogee Maestro 2.app"
-fi
-
-if [ -d "/Applications/Utilities/ApogeeRegistration.app" ]; then
-    echo "Removing ApogeeRegistration.app..."
-    sudo rm -rf "/Applications/Utilities/ApogeeRegistration.app"
 fi
 
 # 2. Remove HAL Plug-ins
