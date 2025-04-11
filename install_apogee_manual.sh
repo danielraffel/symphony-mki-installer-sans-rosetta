@@ -78,14 +78,7 @@ if [ -d "$SOURCE_DIR/Applications/Apogee Maestro 2.app" ]; then
     sudo cp -R "$SOURCE_DIR/Applications/Apogee Maestro 2.app" /Applications/
 fi
 
-# 2. Copy Apogee Registration App (if included)
-if [ -d "$SOURCE_DIR/Applications/Utilities/ApogeeRegistration.app" ]; then
-    echo "Installing ApogeeRegistration.app..."
-    sudo mkdir -p /Applications/Utilities
-    sudo cp -R "$SOURCE_DIR/Applications/Utilities/ApogeeRegistration.app" /Applications/Utilities/
-fi
-
-# 3. Install HAL Plug-ins
+# 2. Install HAL Plug-ins
 HAL_DEST="/Library/Audio/Plug-Ins/HAL/Apogee/Symphony Systems"
 HAL_SOURCE="$SOURCE_DIR/Library/Audio/Plug-Ins/HAL/Apogee/Symphony Systems"
 if [ -d "$HAL_SOURCE" ]; then
@@ -94,7 +87,7 @@ if [ -d "$HAL_SOURCE" ]; then
     sudo cp -R "$HAL_SOURCE/"* "$HAL_DEST/"
 fi
 
-# 4. Install LaunchDaemons
+# 3. Install LaunchDaemons
 DAEMON_SOURCE="$SOURCE_DIR/Library/LaunchDaemons"
 if [ -d "$DAEMON_SOURCE" ]; then
     echo "Installing LaunchDaemons..."
@@ -106,7 +99,7 @@ if [ -d "$DAEMON_SOURCE" ]; then
     done
 fi
 
-# 5. Install ApogeePopup.bundle (optional)
+# 4. Install ApogeePopup.bundle
 POPUP_SOURCE="$SOURCE_DIR/Library/Application Support/Apogee/ApogeePopup.bundle"
 if [ -d "$POPUP_SOURCE" ]; then
     echo "Installing ApogeePopup.bundle..."
@@ -114,7 +107,7 @@ if [ -d "$POPUP_SOURCE" ]; then
     sudo cp -R "$POPUP_SOURCE" "/Library/Application Support/Apogee/"
 fi
 
-# 6. Install System Extensions (if present and needed)
+# 5. Install System Extensions
 EXT_SOURCE="$SOURCE_DIR/Library/Extensions"
 if [ -d "$EXT_SOURCE" ]; then
     echo "Installing kernel extensions..."
@@ -139,7 +132,7 @@ if [ -d "$EXT_SOURCE" ]; then
     fi
 fi
 
-# 7. Register installed products using PlistBuddy
+# 6. Register installed products using PlistBuddy
 PLIST="/Library/Preferences/com.apogee.productsInstalled.plist"
 echo "Registering Symphony I/O and Symphony System in preferences..."
 sudo /usr/libexec/PlistBuddy -c "Add :Symphony\ I/O string 'Symphony I/O'" "$PLIST" 2>/dev/null || \
