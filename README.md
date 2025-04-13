@@ -72,7 +72,7 @@ This will create a folder called symphony-mki-installer-sans-rosetta containing:
 ---
 ## 🖥️ How to Install
 
-Pre-install: Enable Reduced Security (Apple Silicon only)
+Pre-install: Enable Reduced Security (required by official Apogee software installer too)
 
 1. Shutdown your Mac  
 2. Press and hold the **Power** button → click **Options > Continue**  
