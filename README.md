@@ -26,6 +26,7 @@ This script replicates the behavior of Apogee’s official `.pkg` installer, inc
 - Registering background daemons
 - Placing system extensions in `/Library/Extensions`
 - Prompting macOS to show the **“Allow”** button for Apogee extensions
+- Registers installed products using PlistBuddy to update Apogee preferences in /Library/Preferences/com.apogee.productsInstalled.plist.
 - Avoiding Rosetta installation and any unnecessary software
 
 ---
