@@ -104,7 +104,7 @@ When prompted open System Settings > Privacy & Security and click `Allow` when p
   <img src="https://github.com/user-attachments/assets/c45138ba-5165-459c-88bf-9b654159d9d8" alt="image" width="40%" />
 </a>
 
-**macOS will display many windows:**
+**macOS will display many windows - select Open or OK where prompted:**
 - “System Extension Blocked”
 - “Legacy System Extension”
 - “Background Items Added”
